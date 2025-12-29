@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+.chat-popup {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 20px 28px;
+  border-radius: 18px;
+  color: white;
+  text-align: center;
+  max-width: 80%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* USER NAME */
+.chat-user {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #facc15; /* yellow */
+  margin-bottom: 6px;
+}
+
+/* MESSAGE */
+.chat-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* OPEN ANIMATION */
+.chat-popup-enter {
+  animation: popupIn 0.4s ease-out forwards;
+}
+
+/* CLOSE ANIMATION */
+.chat-popup-exit {
+  animation: popupOut 0.4s ease-in forwards;
+}
+
+/* KEYFRAMES */
+@keyframes popupIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes popupOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+}

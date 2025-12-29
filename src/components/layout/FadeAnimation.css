@@ -1,0 +1,31 @@
+.chat-popup {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 20px 32px;
+  border-radius: 16px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.chat-user {
+  font-size: 18px;
+  font-weight: 700;
+  color: #facc15;
+}
+
+.chat-text {
+  margin-top: 6px;
+  font-size: 20px;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
